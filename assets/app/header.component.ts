@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
     <header class="row">
       <nav class="col-md-8 col-md-offset-2">
         <ul class="nav nav-pills">
-          <li>
-            <a >Messanger</a>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/messages']">Messanger</a>
           </li>
-          <li>
-            <a >Authentication</a>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/auth']">Authentication</a>
           </li>
         </ul>
       </nav>
