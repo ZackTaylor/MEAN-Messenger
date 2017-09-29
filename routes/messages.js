@@ -3,6 +3,7 @@ var router = express.Router();
 
 var Message = require('../models/message');
 
+router.get('/');
 router.post('/', function (req, res, next) {
     var message = new Message({
       content: req.body.content
