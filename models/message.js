@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var user = require('./user');
+var User = require('./user');
 
 var schema = new Schema({
   content: {type: String, required: true},
@@ -10,7 +10,8 @@ var schema = new Schema({
 
 schema.post('remove', function(message) {
   User.findById(message.user, function(err, user) {
-    user.messages.pull(message);
+    console.log(message._id);
+    user.messages.pull(message._id);
     user.save();
   });
 });
