@@ -14,6 +14,7 @@ import { LogoutComponent } from "./auth/logout.component";
 import { SignupComponent } from "./auth/signup.component";
 import { SigninComponent } from "./auth/signin.component";
 import { AuthService } from "./auth/auth.service";
+import { AuthGuardService } from "./auth/auth-guard.service";
 
 import { routing } from "./app.routing"
 
@@ -37,7 +38,7 @@ import { routing } from "./app.routing"
       ReactiveFormsModule,
       HttpModule
     ],
-    providers: [AuthService]
+    providers: [AuthService, AuthGuardService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
