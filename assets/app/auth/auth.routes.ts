@@ -6,8 +6,8 @@ import { LogoutComponent } from "./logout.component";
 import { AuthGuardService } from "./auth-guard.service";
 
 export const AUTH_ROUTES: Routes = [
-  { path: '', redirectTo: 'logout', pathMatch: 'full', canActivate: [AuthGuardService]},
+  { path: '', redirectTo: 'logout', pathMatch: 'full'},
   { path: 'signup', component: SignupComponent},
   { path: 'signin', component: SigninComponent},
-  { path: 'logout', component: LogoutComponent}
+  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuardService]}
 ];
