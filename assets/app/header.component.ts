@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <header class="row">
       <nav class="col-md-8 col-md-offset-2">
+      <h1 class="display-1 text-center header">MESSAGE BOARD APP</h1>
         <ul class="nav nav-pills">
           <li routerLinkActive="active">
             <a [routerLink]="['/messages']">Messanger</a>
